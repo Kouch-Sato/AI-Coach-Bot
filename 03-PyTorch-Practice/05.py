@@ -30,7 +30,7 @@ optimizer = torch.optim.SGD(model.parameters(), lr = 0.01)
 
 model.train()
 
-for epoch in range(10):
+for epoch in range(300):
     for x, y in train_loader:
         pred_y = model(x)
         loss = loss_fn(pred_y, y)
@@ -52,4 +52,3 @@ for x, y in test_loader:
 
 accuracy = correct / total
 print (f"{accuracy * 100}%")
-
